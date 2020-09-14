@@ -54,6 +54,7 @@ The following tests are currently implemented:
 | `confirm_longjmp` | ConFIRM `setjmp` / `longjmp` test (from `unmatched_pair`) |
 | `confirm_ret` | ConFIRM return branch test |
 | `confirm_signal` | ConFIRM signal test |
+| `confirm_switch` | ConFIRM switch case test |
 
 ## Acknowledgements
 

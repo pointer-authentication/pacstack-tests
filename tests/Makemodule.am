@@ -298,4 +298,36 @@ confirm_signal_pacstack_dummy_nomask_SOURCES = ${confirm_signal_SOURCES}
 confirm_signal_pacstack_dummy_nomask_CFLAGS = ${AM_CFLAGS} \
     $(pacstack_dummy_nomask_CFLAGS) \
     -iquote $(top_srcdir)/include
->>>>>>> e3dffa2... tests: Add ConFIRM signal test
+
+# ConFIRM switch case tests
+check_PROGRAMS += \
+    confirm_switch_pacstack_full \
+    confirm_switch_pacstack_nomask \
+    confirm_switch_pacstack_dummy_full \
+    confirm_switch_pacstack_dummy_nomask
+
+confirm_switch_includes = include/confirm_setup.h
+
+confirm_switch_SOURCES = ${confirm_switch_includes} \
+    tests/confirm_setup.c \
+    tests/confirm_switch.c
+
+confirm_switch_pacstack_full_SOURCES = ${confirm_switch_SOURCES}
+confirm_switch_pacstack_full_CFLAGS = ${AM_CFLAGS} \
+    $(pacstack_full_CFLAGS) \
+    -iquote $(top_srcdir)/include
+
+confirm_switch_pacstack_nomask_SOURCES = ${confirm_switch_SOURCES}
+confirm_switch_pacstack_nomask_CFLAGS = ${AM_CFLAGS} \
+    $(pacstack_nomask_CFLAGS) \
+    -iquote $(top_srcdir)/include
+
+confirm_switch_pacstack_dummy_full_SOURCES = ${confirm_switch_SOURCES}
+confirm_switch_pacstack_dummy_full_CFLAGS = ${AM_CFLAGS} \
+    $(pacstack_dummy_full_CFLAGS) \
+    -iquote $(top_srcdir)/include
+
+confirm_switch_pacstack_dummy_nomask_SOURCES = ${confirm_switch_SOURCES}
+confirm_switch_pacstack_dummy_nomask_CFLAGS = ${AM_CFLAGS} \
+    $(pacstack_dummy_nomask_CFLAGS) \
+    -iquote $(top_srcdir)/include
