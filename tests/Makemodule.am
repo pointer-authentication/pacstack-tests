@@ -23,3 +23,113 @@ conftest_pacstack_dummy_nomask_SOURCES = ${conftest_SOURCES}
 conftest_pacstack_dummy_nomask_CFLAGS = ${AM_CFLAGS} \
     $(pacstack_dummy_nomask_CFLAGS)
 
+# ConFIRM callback tests
+check_PROGRAMS += \
+    confirm_callback_pacstack_full \
+    confirm_callback_pacstack_nomask \
+    confirm_callback_pacstack_dummy_full \
+    confirm_callback_pacstack_dummy_nomask
+
+confirm_callback_includes = include/confirm_setup.h
+
+confirm_callback_SOURCES = ${confirm_callback_includes} \
+    tests/confirm_setup.c \
+    tests/confirm_callback.c
+
+confirm_callback_pacstack_full_SOURCES = ${confirm_callback_SOURCES}
+confirm_callback_pacstack_full_CFLAGS = ${AM_CFLAGS} \
+    $(pacstack_full_CFLAGS) \
+    -iquote $(top_srcdir)/include
+
+confirm_callback_pacstack_full_LDFLAGS = ${AM_LDFLAGS} \
+    -lpthread
+
+confirm_callback_pacstack_nomask_SOURCES = ${confirm_callback_SOURCES}
+confirm_callback_pacstack_nomask_CFLAGS = ${AM_CFLAGS} \
+    $(pacstack_nomask_CFLAGS) \
+    -iquote $(top_srcdir)/include
+
+confirm_callback_pacstack_nomask_LDFLAGS = ${AM_LDFLAGS} \
+    -lpthread
+
+confirm_callback_pacstack_dummy_full_SOURCES = ${confirm_callback_SOURCES}
+confirm_callback_pacstack_dummy_full_CFLAGS = ${AM_CFLAGS} \
+    $(pacstack_dummy_full_CFLAGS) \
+    -iquote $(top_srcdir)/include
+
+confirm_callback_pacstack_dummy_full_LDFLAGS = ${AM_LDFLAGS} \
+    -lpthread
+
+confirm_callback_pacstack_dummy_nomask_SOURCES = ${confirm_callback_SOURCES}
+confirm_callback_pacstack_dummy_nomask_CFLAGS = ${AM_CFLAGS} \
+    $(pacstack_dummy_nomask_CFLAGS) \
+    -iquote $(top_srcdir)/include
+
+confirm_callback_pacstack_dummy_nomask_LDFLAGS = ${AM_LDFLAGS} \
+    -lpthread
+
+# ConFIRM call convention tests
+check_PROGRAMS += \
+    confirm_convention_pacstack_full \
+    confirm_convention_pacstack_nomask \
+    confirm_convention_pacstack_dummy_full \
+    confirm_convention_pacstack_dummy_nomask
+
+confirm_convention_includes = include/confirm_setup.h
+
+confirm_convention_SOURCES = ${confirm_convention_includes} \
+                      tests/confirm_setup.c \
+                      tests/confirm_convention.c
+
+confirm_convention_pacstack_full_SOURCES = ${confirm_convention_SOURCES}
+confirm_convention_pacstack_full_CFLAGS = ${AM_CFLAGS} \
+    $(pacstack_full_CFLAGS) \
+    -iquote $(top_srcdir)/include
+
+confirm_convention_pacstack_nomask_SOURCES = ${confirm_convention_SOURCES}
+confirm_convention_pacstack_nomask_CFLAGS = ${AM_CFLAGS} \
+    $(pacstack_nomask_CFLAGS) \
+    -iquote $(top_srcdir)/include
+
+confirm_convention_pacstack_dummy_full_SOURCES = ${confirm_convention_SOURCES}
+confirm_convention_pacstack_dummy_full_CFLAGS = ${AM_CFLAGS} \
+    $(pacstack_dummy_full_CFLAGS) \
+    -iquote $(top_srcdir)/include
+
+confirm_convention_pacstack_dummy_nomask_SOURCES = ${confirm_convention_SOURCES}
+confirm_convention_pacstack_dummy_nomask_CFLAGS = ${AM_CFLAGS} \
+    $(pacstack_dummy_nomask_CFLAGS) \
+    -iquote $(top_srcdir)/include
+    
+# ConFIRM C++ exception handling tests
+check_PROGRAMS += \
+    confirm_cppeh_pacstack_full \
+    confirm_cppeh_pacstack_nomask \
+    confirm_cppeh_pacstack_dummy_full \
+    confirm_cppeh_pacstack_dummy_nomask
+
+confirm_cppeh_includes = include/confirm_setup.h
+
+confirm_cppeh_SOURCES = ${confirm_cppeh_includes} \
+                      tests/confirm_setup.c \
+                      tests/confirm_cppeh.c
+
+confirm_cppeh_pacstack_full_SOURCES = ${confirm_cppeh_SOURCES}
+confirm_cppeh_pacstack_full_CXXFLAGS = ${AM_CXXFLAGS} \
+    $(pacstack_full_CXXFLAGS) \
+    -iquote $(top_srcdir)/include
+
+confirm_cppeh_pacstack_nomask_SOURCES = ${confirm_cppeh_SOURCES}
+confirm_cppeh_pacstack_nomask_CXXFLAGS = ${AM_CXXFLAGS} \
+    $(pacstack_nomask_CXXFLAGS) \
+    -iquote $(top_srcdir)/include
+
+confirm_cppeh_pacstack_dummy_full_SOURCES = ${confirm_cppeh_SOURCES}
+confirm_cppeh_pacstack_dummy_full_CXXFLAGS = ${AM_CXXFLAGS} \
+    $(pacstack_dummy_full_CXXFLAGS) \
+    -iquote $(top_srcdir)/include
+
+confirm_cppeh_pacstack_dummy_nomask_SOURCES = ${confirm_cppeh_SOURCES}
+confirm_cppeh_pacstack_dummy_nomask_CXXFLAGS = ${AM_CXXFLAGS} \
+    $(pacstack_dummy_nomask_CXXFLAGS) \
+    -iquote $(top_srcdir)/include

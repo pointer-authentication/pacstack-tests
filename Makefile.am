@@ -6,6 +6,12 @@ ACLOCAL_AMFLAGS = -I m4
 # Additional C compiler flags
 AM_CFLAGS = -Wall -Wextra
 
+# Additional C++ compiler flags
+AM_CXXFLAGS = -Wall -Wextra
+
+# Additional linker flags
+AM_LDFLAGS =
+
 # PACStack full compiler flags
 pacstack_full_CFLAGS = -mllvm -pacstack=full
 

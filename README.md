@@ -46,6 +46,14 @@ The following tests are currently implemented:
 | Test | Description |
 | --- | --- |
 | `conftest` | Minimal _"Hello World"_ test for testing build configuration |
+| `confirm_callback` | ConFIRM callback test |
+
+## Acknowledgements
+
+Several tests included in this repository have been sourced from the [ConFIRM](https://github.com/SoftwareLanguagesSecurityLab/ConFIRM)
+microbenchmarking suite for control-flow integrity relevance metrics originally
+developed by the Software Languages Security Lab at the University of Texas at
+Dallas. Licensed under the MIT license.
 
 ## License
 
