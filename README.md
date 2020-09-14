@@ -52,6 +52,7 @@ The following tests are currently implemented:
 | `confirm_fptr` | ConFIRM function pointer test |
 | `confirm_load_time_dynlnk` | ConFIRM load time dynamic linking test |
 | `confirm_longjmp` | ConFIRM `setjmp` / `longjmp` test (from `unmatched_pair`) |
+| `confirm_ret` | ConFIRM return branch test |
 
 ## Acknowledgements
 
