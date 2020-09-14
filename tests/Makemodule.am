@@ -265,3 +265,37 @@ confirm_ret_pacstack_dummy_nomask_SOURCES = ${confirm_ret_SOURCES}
 confirm_ret_pacstack_dummy_nomask_CFLAGS = ${AM_CFLAGS} \
     $(pacstack_dummy_nomask_CFLAGS) \
     -iquote $(top_srcdir)/include
+
+# ConFIRM signal tests
+check_PROGRAMS += \
+    confirm_signal_pacstack_full \
+    confirm_signal_pacstack_nomask \
+    confirm_signal_pacstack_dummy_full \
+    confirm_signal_pacstack_dummy_nomask
+
+confirm_signal_includes = include/confirm_setup.h
+
+confirm_signal_SOURCES = ${confirm_signal_includes} \
+    tests/confirm_setup.c \
+    tests/confirm_signal.c
+
+confirm_signal_pacstack_full_SOURCES = ${confirm_signal_SOURCES}
+confirm_signal_pacstack_full_CFLAGS = ${AM_CFLAGS} \
+    $(pacstack_full_CFLAGS) \
+    -iquote $(top_srcdir)/include
+
+confirm_signal_pacstack_nomask_SOURCES = ${confirm_signal_SOURCES}
+confirm_signal_pacstack_nomask_CFLAGS = ${AM_CFLAGS} \
+    $(pacstack_nomask_CFLAGS) \
+    -iquote $(top_srcdir)/include
+
+confirm_signal_pacstack_dummy_full_SOURCES = ${confirm_signal_SOURCES}
+confirm_signal_pacstack_dummy_full_CFLAGS = ${AM_CFLAGS} \
+    $(pacstack_dummy_full_CFLAGS) \
+    -iquote $(top_srcdir)/include
+
+confirm_signal_pacstack_dummy_nomask_SOURCES = ${confirm_signal_SOURCES}
+confirm_signal_pacstack_dummy_nomask_CFLAGS = ${AM_CFLAGS} \
+    $(pacstack_dummy_nomask_CFLAGS) \
+    -iquote $(top_srcdir)/include
+>>>>>>> e3dffa2... tests: Add ConFIRM signal test
