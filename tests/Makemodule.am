@@ -331,3 +331,36 @@ confirm_switch_pacstack_dummy_nomask_SOURCES = ${confirm_switch_SOURCES}
 confirm_switch_pacstack_dummy_nomask_CFLAGS = ${AM_CFLAGS} \
     $(pacstack_dummy_nomask_CFLAGS) \
     -iquote $(top_srcdir)/include
+
+# ConFIRM tail call tests
+check_PROGRAMS += \
+    confirm_tail_call_pacstack_full \
+    confirm_tail_call_pacstack_nomask \
+    confirm_tail_call_pacstack_dummy_full \
+    confirm_tail_call_pacstack_dummy_nomask
+
+confirm_tail_call_includes = include/confirm_setup.h
+
+confirm_tail_call_SOURCES = ${confirm_tail_call_includes} \
+    tests/confirm_setup.c \
+    tests/confirm_tail_call.c
+
+confirm_tail_call_pacstack_full_SOURCES = ${confirm_tail_call_SOURCES}
+confirm_tail_call_pacstack_full_CFLAGS = ${AM_CFLAGS} \
+    $(pacstack_full_CFLAGS) \
+    -iquote $(top_srcdir)/include
+
+confirm_tail_call_pacstack_nomask_SOURCES = ${confirm_tail_call_SOURCES}
+confirm_tail_call_pacstack_nomask_CFLAGS = ${AM_CFLAGS} \
+    $(pacstack_nomask_CFLAGS) \
+    -iquote $(top_srcdir)/include
+
+confirm_tail_call_pacstack_dummy_full_SOURCES = ${confirm_tail_call_SOURCES}
+confirm_tail_call_pacstack_dummy_full_CFLAGS = ${AM_CFLAGS} \
+    $(pacstack_dummy_full_CFLAGS) \
+    -iquote $(top_srcdir)/include
+
+confirm_tail_call_pacstack_dummy_nomask_SOURCES = ${confirm_tail_call_SOURCES}
+confirm_tail_call_pacstack_dummy_nomask_CFLAGS = ${AM_CFLAGS} \
+    $(pacstack_dummy_nomask_CFLAGS) \
+    -iquote $(top_srcdir)/include

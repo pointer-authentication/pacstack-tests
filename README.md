@@ -55,6 +55,7 @@ The following tests are currently implemented:
 | `confirm_ret` | ConFIRM return branch test |
 | `confirm_signal` | ConFIRM signal test |
 | `confirm_switch` | ConFIRM switch case test |
+| `confirm_tail_call` | ConFIRM tail call test |
 
 ## Acknowledgements
 
