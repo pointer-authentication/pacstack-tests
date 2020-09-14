@@ -48,6 +48,7 @@ The following tests are currently implemented:
 | `conftest` | Minimal _"Hello World"_ test for testing build configuration |
 | `confirm_callback` | ConFIRM callback test |
 | `confirm_convention` | ConFIRM C++ call convention test |
+| `confirm_cppeh` | ConFIRM C++ exception handling test |
 
 ## Acknowledgements
 
