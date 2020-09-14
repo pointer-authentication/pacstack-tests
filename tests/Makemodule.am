@@ -199,3 +199,36 @@ confirm_load_time_dynlnk_pacstack_dummy_nomask_SOURCES = ${confirm_load_time_dyn
 confirm_load_time_dynlnk_pacstack_dummy_nomask_CFLAGS = ${AM_CFLAGS} \
     $(pacstack_dummy_nomask_CFLAGS) \
     -iquote $(top_srcdir)/include
+
+# ConFIRM longjmp tests
+check_PROGRAMS += \
+    confirm_longjmp_pacstack_full \
+    confirm_longjmp_pacstack_nomask \
+    confirm_longjmp_pacstack_dummy_full \
+    confirm_longjmp_pacstack_dummy_nomask
+
+confirm_longjmp_includes = include/confirm_setup.h
+
+confirm_longjmp_SOURCES = ${confirm_longjmp_includes} \
+    tests/confirm_setup.c \
+    tests/confirm_longjmp.c
+
+confirm_longjmp_pacstack_full_SOURCES = ${confirm_longjmp_SOURCES}
+confirm_longjmp_pacstack_full_CFLAGS = ${AM_CFLAGS} \
+    $(pacstack_full_CFLAGS) \
+    -iquote $(top_srcdir)/include
+
+confirm_longjmp_pacstack_nomask_SOURCES = ${confirm_longjmp_SOURCES}
+confirm_longjmp_pacstack_nomask_CFLAGS = ${AM_CFLAGS} \
+    $(pacstack_nomask_CFLAGS) \
+    -iquote $(top_srcdir)/include
+
+confirm_longjmp_pacstack_dummy_full_SOURCES = ${confirm_longjmp_SOURCES}
+confirm_longjmp_pacstack_dummy_full_CFLAGS = ${AM_CFLAGS} \
+    $(pacstack_dummy_full_CFLAGS) \
+    -iquote $(top_srcdir)/include
+
+confirm_longjmp_pacstack_dummy_nomask_SOURCES = ${confirm_longjmp_SOURCES}
+confirm_longjmp_pacstack_dummy_nomask_CFLAGS = ${AM_CFLAGS} \
+    $(pacstack_dummy_nomask_CFLAGS) \
+    -iquote $(top_srcdir)/include
