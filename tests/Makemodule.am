@@ -103,34 +103,34 @@ confirm_convention_pacstack_dummy_nomask_CXXFLAGS = ${AM_CXXFLAGS} \
 
 # ConFIRM C++ exception handling tests
 check_PROGRAMS += \
-    confirm_cppeh_pacstack_full \
-    confirm_cppeh_pacstack_nomask \
-    confirm_cppeh_pacstack_dummy_full \
-    confirm_cppeh_pacstack_dummy_nomask
+    confirm_exception_pacstack_full \
+    confirm_exception_pacstack_nomask \
+    confirm_exception_pacstack_dummy_full \
+    confirm_exception_pacstack_dummy_nomask
 
-confirm_cppeh_includes = include/confirm_setup.h
+confirm_exception_includes = include/confirm_setup.h
 
-confirm_cppeh_SOURCES = ${confirm_cppeh_includes} \
+confirm_exception_SOURCES = ${confirm_exception_includes} \
     tests/confirm_setup.cpp \
-    tests/confirm_cppeh.cpp
+    tests/confirm_exception.cpp
 
-confirm_cppeh_pacstack_full_SOURCES = ${confirm_cppeh_SOURCES}
-confirm_cppeh_pacstack_full_CXXFLAGS = ${AM_CXXFLAGS} \
+confirm_exception_pacstack_full_SOURCES = ${confirm_exception_SOURCES}
+confirm_exception_pacstack_full_CXXFLAGS = ${AM_CXXFLAGS} \
     $(pacstack_full_CXXFLAGS) \
     -iquote $(top_srcdir)/include
 
-confirm_cppeh_pacstack_nomask_SOURCES = ${confirm_cppeh_SOURCES}
-confirm_cppeh_pacstack_nomask_CXXFLAGS = ${AM_CXXFLAGS} \
+confirm_exception_pacstack_nomask_SOURCES = ${confirm_exception_SOURCES}
+confirm_exception_pacstack_nomask_CXXFLAGS = ${AM_CXXFLAGS} \
     $(pacstack_nomask_CXXFLAGS) \
     -iquote $(top_srcdir)/include
 
-confirm_cppeh_pacstack_dummy_full_SOURCES = ${confirm_cppeh_SOURCES}
-confirm_cppeh_pacstack_dummy_full_CXXFLAGS = ${AM_CXXFLAGS} \
+confirm_exception_pacstack_dummy_full_SOURCES = ${confirm_exception_SOURCES}
+confirm_exception_pacstack_dummy_full_CXXFLAGS = ${AM_CXXFLAGS} \
     $(pacstack_dummy_full_CXXFLAGS) \
     -iquote $(top_srcdir)/include
 
-confirm_cppeh_pacstack_dummy_nomask_SOURCES = ${confirm_cppeh_SOURCES}
-confirm_cppeh_pacstack_dummy_nomask_CXXFLAGS = ${AM_CXXFLAGS} \
+confirm_exception_pacstack_dummy_nomask_SOURCES = ${confirm_exception_SOURCES}
+confirm_exception_pacstack_dummy_nomask_CXXFLAGS = ${AM_CXXFLAGS} \
     $(pacstack_dummy_nomask_CXXFLAGS) \
     -iquote $(top_srcdir)/include
 

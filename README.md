@@ -48,7 +48,7 @@ The following tests are currently implemented:
 | `conftest` | Minimal _"Hello World"_ test for testing build configuration |
 | `confirm_callback` | ConFIRM callback test |
 | `confirm_convention` | ConFIRM C++ call convention test |
-| `confirm_cppeh` | ConFIRM C++ exception handling test |
+| `confirm_exception` | ConFIRM C++ exception handling test (`unmatched_pair` and `cppeh`) |
 | `confirm_fptr` | ConFIRM function pointer test |
 | `confirm_load_time_dynlnk` | ConFIRM load time dynamic linking test |
 | `confirm_longjmp` | ConFIRM `setjmp` / `longjmp` test (from `unmatched_pair`) |

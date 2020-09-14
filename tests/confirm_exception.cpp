@@ -33,6 +33,10 @@
 
 #include "confirm_setup.h"
 
+void exception_test();
+void exception_callee1();
+void exception_callee2();
+
 void throwInt();
 void throwBool();
 static int int_catch_count = 0;
@@ -44,6 +48,10 @@ int main()
     
     // Initialize random seed
     srand((unsigned int)time(NULL));
+    
+    // Check if a CFI solution can handle unmatched call/return pair due to exception. 
+    exception_test();
+    printf("C++ unmatched return exception test passed.");
     
     // Throw and catch C++ exceptions in an intensive loop, to see if a CFI solution
     // being tested provides semantic transparency.
@@ -74,6 +82,36 @@ int main()
     printf("C++ exception test passed.");
 
     return 0;
+}
+
+void exception_test()
+{
+    try
+    {
+        printf("1. a message in exception_test try block\n");
+        exception_callee1();
+    }
+    catch (int e)
+    {
+        printf("4. a message in exception_test catch block\n");
+    }
+}
+
+void exception_callee1()
+{
+    printf("2. a message in exception_callee1\n");
+    exception_callee2();
+}
+
+void exception_callee2()
+{
+    printf("3. a message in exception_callee2\n");
+    
+    // This exception being caught by the catch block in exception_test(), results in
+    // popping stack frames from multiple calls, followed by a return at the end of
+    // exception_test(). Shadow stack defenses that are implemented based on
+    // call/return matching may be problematic.
+    throw 7;
 }
 
 void throwInt()
