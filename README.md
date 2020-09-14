@@ -50,6 +50,7 @@ The following tests are currently implemented:
 | `confirm_convention` | ConFIRM C++ call convention test |
 | `confirm_cppeh` | ConFIRM C++ exception handling test |
 | `confirm_fptr` | ConFIRM function pointer test |
+| `confirm_load_time_dynlnk` | ConFIRM load time dynamic linking test |
 
 ## Acknowledgements
 
