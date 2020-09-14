@@ -8,6 +8,7 @@ AM_INIT_AUTOMAKE([foreign subdir-objects])
 
 # Checks for programs.
 AC_PROG_CC
+AC_PROG_CXX
 
 # Created configuration files.
 AC_CONFIG_FILES([Makefile])
