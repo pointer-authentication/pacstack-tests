@@ -56,6 +56,7 @@ The following tests are currently implemented:
 | `confirm_signal` | ConFIRM signal test |
 | `confirm_switch` | ConFIRM switch case test |
 | `confirm_tail_call` | ConFIRM tail call test |
+| `confirm_vtable_call` | ConFIRM C++ vtable call test |
 
 ## Acknowledgements
 
